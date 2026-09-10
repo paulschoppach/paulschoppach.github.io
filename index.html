@@ -15,48 +15,80 @@
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: #ffffff;
       color: #000000;
-      min-height: 100vh;
+      min-height: 100svh;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 1.5rem;
     }
+
     main {
       text-align: center;
+      width: 100%;
+      max-width: 480px;
     }
+
+    /* Mobile first */
     .handle {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.2;
     }
+
     .handle svg {
       width: 1.75rem;
       height: 1.75rem;
       fill: #0085ff;
       flex-shrink: 0;
     }
+
     .bluesky-link {
-      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.95rem;
       color: #000000;
       text-decoration: none;
       border-bottom: 1px solid #000000;
+      padding: 0.5rem 0;
+      min-height: 44px;
     }
+
     .bluesky-link:hover {
-      opacity: 0.7;
+      opacity: 0.6;
+    }
+
+    /* Tablet and up */
+    @media (min-width: 600px) {
+      .handle {
+        font-size: 2rem;
+        gap: 0.625rem;
+      }
+
+      .handle svg {
+        width: 2.25rem;
+        height: 2.25rem;
+      }
+
+      .bluesky-link {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
 <body>
   <main>
     <div class="handle">
-      <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Bluesky">
+      <svg role="img" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-label="Bluesky">
         <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.757 3.72 3.66 6.402 3.36.168-.015.33-.03.497-.047-.165.025-.33.05-.497.077-2.747.43-5.544 1.866-4.904 5.652.312 1.832 1.515 2.37 2.538 2.546C6.795 22.217 8.792 22 12 22c3.208 0 5.205.217 7.34-.165 1.023-.175 2.226-.714 2.538-2.546.64-3.786-2.157-5.222-4.904-5.652-.167-.027-.332-.052-.497-.077.167.017.33.032.497.047 2.682.3 5.587-.603 6.402-3.36.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.204-.659-.299-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/>
       </svg>
       @paulschoppach.org
